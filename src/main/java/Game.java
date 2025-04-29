@@ -6,8 +6,9 @@ public class Game {
     private int price;
 
     public Game(String name, double rating, int price) {
-        //TODO
-
+        this.name = name;
+        this.rating = rating;
+        this.price = price;
     }
 
     public String getName() {
@@ -25,8 +26,7 @@ public class Game {
 
     @Override
     public String toString() {
-        //TODO
-        return "";
+        return "Game: " + name + ", rating: " + rating + ", price: " + price;
     }
 
     @Override
@@ -36,5 +36,4 @@ public class Game {
         Game game = (Game) o;
         return Double.compare(game.rating, rating) == 0 && Double.compare(game.price, price) == 0 && Objects.equals(name, game.name);
     }
-
 }
